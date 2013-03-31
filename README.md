@@ -1,5 +1,7 @@
-iScroll v4.2.5 - 2012-10-26
+iScroll v4.2.6 - 2013-03-30
 ===========================
+
+3/30/2013 -- Added onScrolling to provide positioning during momentum scroll animation.
 
 The overflow:scroll for mobile webkit. Project started because webkit for iPhone does not provide a native way to scroll content inside a fixed size (width/height) div. So basically it was impossible to have a fixed header/footer and a scrolling central area. Until now. Read more at [cubiq.org](http://cubiq.org).
 

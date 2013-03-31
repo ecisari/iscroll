@@ -1,5 +1,5 @@
 /*!
- * iScroll v4.2.5 ~ Copyright (c) 2012 Matteo Spinelli, http://cubiq.org
+ * iScroll v4.2.6 ~ Copyright (c) 2012 Matteo Spinelli, http://cubiq.org
  * Released under MIT license, http://cubiq.org/license
  */
 (function(window, doc){
@@ -130,6 +130,7 @@ var m = Math,
 			onScrollStart: null,
 			onBeforeScrollMove: null,
 			onScrollMove: null,
+			onScrolling: null,
 			onBeforeScrollEnd: null,
 			onScrollEnd: null,
 			onTouchEnd: null,
@@ -764,6 +765,8 @@ iScroll.prototype = {
 			newY = (step.y - startY) * easeOut + startY;
 			that._pos(newX, newY);
 			if (that.animating) that.aniTime = nextFrame(animate);
+			
+			if (that.options.onScrolling) that.options.onScrolling.call(that);
 		};
 
 		animate();
